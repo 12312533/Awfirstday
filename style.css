@@ -1,0 +1,95 @@
+:root {
+    --cream: #FFFDD0;
+    --pink: #FFB7C5;
+    --soft-pink: #FFF0F5;
+    --dark-pink: #FF8DA1;
+}
+
+body {
+    background-color: var(--cream);
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Dekorasi Ramai */
+.floating-icons span {
+    position: absolute;
+    font-size: 2rem;
+    z-index: -1;
+    animation: float 6s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-30px) rotate(20deg); }
+}
+
+/* Custom posisi icon agar ramai */
+.floating-icons span:nth-child(1) { top: 10%; left: 10%; }
+.floating-icons span:nth-child(2) { top: 20%; right: 15%; }
+.floating-icons span:nth-child(3) { bottom: 15%; left: 15%; }
+.floating-icons span:nth-child(4) { bottom: 20%; right: 10%; }
+.floating-icons span:nth-child(5) { top: 50%; left: 5%; }
+
+.main-card {
+    background: white;
+    width: 90%;
+    max-width: 400px;
+    border: 10px solid var(--pink);
+    border-radius: 50px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 20px 0px var(--pink);
+    position: relative;
+}
+
+.calendar-container {
+    background: var(--dark-pink);
+    color: white;
+    width: 100px;
+    border-radius: 15px;
+    margin: -60px auto 20px;
+    border: 5px solid white;
+    font-family: 'Fredoka One', cursive;
+}
+
+.cal-header { font-size: 0.8rem; padding: 5px; }
+.cal-body { background: white; color: black; font-size: 2rem; }
+.cal-footer { font-size: 0.7rem; padding: 5px; }
+
+.media-frame img, .media-frame video {
+    width: 100%;
+    border-radius: 30px;
+    border: 4px dashed var(--dark-pink);
+    background: var(--soft-pink);
+}
+
+.message-bubble {
+    background: var(--soft-pink);
+    border: 3px solid var(--dark-pink);
+    border-radius: 20px;
+    padding: 15px;
+    margin: 20px 0;
+    position: relative;
+    font-size: 1rem;
+    color: #444;
+}
+
+.wa-btn {
+    display: block;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 6px 0 #128C7E;
+    transition: 0.2s;
+}
+
+.wa-btn:active { transform: translateY(4px); box-shadow: 0 2px 0 #128C7E; }
